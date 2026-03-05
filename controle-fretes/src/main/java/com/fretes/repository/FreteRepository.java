@@ -1,5 +1,8 @@
 package com.fretes.repository;
 
-public interface FreteRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.fretes.entity.Frete;
+
+public interface FreteRepository extends JpaRepository<Frete, Integer> {
 }

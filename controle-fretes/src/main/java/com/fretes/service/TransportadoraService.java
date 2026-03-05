@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.fretes.dto.TransportadoraDTO;
 import com.fretes.entity.Transportadora;
 import com.fretes.repository.TransportadoraRepository;
 
@@ -44,4 +45,16 @@ public class TransportadoraService {
 
         return repository.save(existente);
     }
+
+    public Transportadora salvarDTO(TransportadoraDTO dto) {
+
+    Transportadora t = new Transportadora();
+
+    t.setNome(dto.getNome());
+    t.setCnpj(dto.getCnpj());
+    t.setEmail(dto.getEmail());
+    t.setTelefone(dto.getTelefone());
+
+    return repository.save(t);
+}
 }

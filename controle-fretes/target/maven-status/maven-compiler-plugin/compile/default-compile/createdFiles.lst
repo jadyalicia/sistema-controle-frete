@@ -1,5 +1,5 @@
-com\fretes\service\TransportadoraService.class
-com\fretes\ControleFretesApplication.class
+com\fretes\entity\TabelaFrete.class
+com\fretes\repository\FreteRepository.class
 com\fretes\repository\TransportadoraRepository.class
-com\fretes\controller\TransportadoraController.class
+com\fretes\entity\Frete.class
 com\fretes\entity\Transportadora.class

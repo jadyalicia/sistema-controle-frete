@@ -5,6 +5,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 @Table(name = "transportadoras")
@@ -18,6 +21,9 @@ public class Transportadora {
     private String cnpj;
     private String telefone;
     private String email;
+
+    @OneToMany(mappedBy = "transportadora")
+    private List<Frete> fretes;
 
     // getters e setters
     public Long getId() { return id; }

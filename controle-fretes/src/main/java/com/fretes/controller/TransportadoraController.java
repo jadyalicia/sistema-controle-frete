@@ -27,37 +27,52 @@ public class TransportadoraController {
         this.service = service;
     }
 
+    // LISTAR
     @GetMapping
     public List<Transportadora> listar() {
         return service.listar();
     }
 
+    // BUSCAR POR ID
+    @GetMapping("/{id}")
+    public Transportadora buscar(@PathVariable Integer id) {
+        return service.buscarPorId(id);
+    }
+
+    // SALVAR (USANDO DTO)
     @PostMapping
-    public Transportadora salvar(@RequestBody Transportadora t) {
+    public Transportadora salvar(@RequestBody TransportadoraDTO dto) {
+
+        Transportadora t = new Transportadora();
+
+        t.setNome(dto.getNome());
+        t.setCnpj(dto.getCnpj());
+        t.setTelefone(dto.getTelefone());
+        t.setEmail(dto.getEmail());
+
         return service.salvar(t);
     }
 
-    @GetMapping("/{id}")
-public Transportadora buscar(@PathVariable Integer id) {
-    return service.buscarPorId(id);
-}
-
-    @DeleteMapping("/{id}")
-public void deletar(@PathVariable Integer id) {
-    service.deletar(id);
-}
-
+    // ATUALIZAR
     @PutMapping("/{id}")
-public Transportadora atualizar(
-        @PathVariable Integer id,
-        @RequestBody Transportadora transportadora) {
+    public Transportadora atualizar(
+            @PathVariable Integer id,
+            @RequestBody TransportadoraDTO dto) {
 
-    return service.atualizar(id, transportadora);
-}
+        Transportadora t = new Transportadora();
 
-@PostMapping
-public Transportadora salvar(@RequestBody TransportadoraDTO dto) {
-    return service.salvarDTO(dto);
-}
+        t.setNome(dto.getNome());
+        t.setCnpj(dto.getCnpj());
+        t.setTelefone(dto.getTelefone());
+        t.setEmail(dto.getEmail());
+
+        return service.atualizar(id, t);
+    }
+
+    // DELETAR
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Integer id) {
+        service.deletar(id);
+    }
 
 }
