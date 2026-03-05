@@ -52,7 +52,7 @@ public class UploadTabelaFreteService {
                 double valor = row.getCell(5).getNumericCellValue();
 
                 Transportadora transportadora =
-                        TransportadoraRepository.findById(transportadoraId).orElseThrow();
+                        transportadoraRepository.findById(transportadoraId).orElseThrow();
 
                 TabelaFrete tabela = new TabelaFrete();
 
