@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface TabelaFreteRepository extends JpaRepository<TabelaFrete, Long> {
 
+    List<TabelaFrete> findByCidadeDestino(String cidadeDestino);
+
     List<TabelaFrete> findByEstadoDestino(String estadoDestino);
 
 }

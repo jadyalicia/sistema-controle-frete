@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.fretes.entity.TabelaFrete;
+import com.fretes.repository.TransportadoraRepository;
 import com.fretes.entity.Transportadora;
 import com.fretes.repository.TabelaFreteRepository;
-import com.fretes.repository.TransportadoraRepository;
+
 
 @Service
 public class UploadTabelaFreteService {
@@ -44,15 +45,23 @@ public class UploadTabelaFreteService {
 
                 Row row = rows.next();
 
-                Long transportadoraId = (long) row.getCell(0).getNumericCellValue();
-                String estado = row.getCell(1).getStringCellValue();
-                String cidade = row.getCell(2).getStringCellValue();
+                Integer transportadoraId = (int) row.getCell(0).getNumericCellValue();
+
+                String estado = row.getCell(1, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK)
+                        .getStringCellValue();
+
+                String cidade = row.getCell(2, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK)
+                        .getStringCellValue();
+
                 double pesoMin = row.getCell(3).getNumericCellValue();
+
                 double pesoMax = row.getCell(4).getNumericCellValue();
+
                 double valor = row.getCell(5).getNumericCellValue();
 
                 Transportadora transportadora =
-                        transportadoraRepository.findById(transportadoraId).orElseThrow();
+                transportadoraRepository.findById(transportadoraId)
+                .orElseThrow();
 
                 TabelaFrete tabela = new TabelaFrete();
 
@@ -70,7 +79,7 @@ public class UploadTabelaFreteService {
 
         } catch (Exception e) {
 
-            throw new RuntimeException("Erro ao processar arquivo");
+            throw new RuntimeException("Erro ao processar arquivo: " + e.getMessage());
         }
     }
 }
