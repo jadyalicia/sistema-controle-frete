@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fretes.dto.CotacaoResponseDTO;
 import com.fretes.entity.Frete;
-import com.fretes.entity.TabelaFrete;
 import com.fretes.service.CotacaoService;
 import com.fretes.service.FreteService;
-import com.fretes.dto.CotacaoResponseDTO;
 
 @RestController
 @RequestMapping("/fretes")
