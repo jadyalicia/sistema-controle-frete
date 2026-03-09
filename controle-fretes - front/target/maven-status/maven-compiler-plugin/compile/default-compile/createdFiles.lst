@@ -1,0 +1,6 @@
+controller\FretesController.class
+model\DashboardDTO.class
+model\Frete.class
+service\ApiService.class
+app\Main.class
+controller\DashboardController.class
