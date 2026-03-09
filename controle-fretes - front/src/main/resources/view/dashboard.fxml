@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.DashboardController">
+    <Label text="Dashboard de Fretes" style="-fx-font-size: 20px;"/>
+    <HBox spacing="10" alignment="CENTER">
+        <VBox spacing="5" style="-fx-background-color: #E0F7FA; -fx-padding: 10; -fx-border-radius: 8; -fx-background-radius: 8;">
+            <Label text="Total de Fretes"/>
+            <Label fx:id="totalFretesLabel" text="0"/>
+        </VBox>
+        <VBox spacing="5" style="-fx-background-color: #FFF9C4; -fx-padding: 10; -fx-border-radius: 8; -fx-background-radius: 8;">
+            <Label text="Valor Total"/>
+            <Label fx:id="valorTotalLabel" text="0"/>
+        </VBox>
+        <VBox spacing="5" style="-fx-background-color: #C8E6C9; -fx-padding: 10; -fx-border-radius: 8; -fx-background-radius: 8;">
+            <Label text="Valor Médio"/>
+            <Label fx:id="valorMedioLabel" text="0"/>
+        </VBox>
+    </HBox>
+    <Label fx:id="transportadoraLabel" text="Transportadora Mais Usada: -"/>
+    <Button text="Ver Fretes" fx:id="verFretesButton" onAction="#handleVerFretes"/>
+</VBox>

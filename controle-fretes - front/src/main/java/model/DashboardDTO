@@ -1,0 +1,17 @@
+package model;
+
+public class DashboardDTO {
+    private int totalFretes;
+    private double valorTotal;
+    private double valorMedio;
+    private String transportadoraMaisUsada;
+
+    public DashboardDTO(int total, double totalValor, double media, String maisUsada){
+        this.totalFretes=total; this.valorTotal=totalValor; this.valorMedio=media; this.transportadoraMaisUsada=maisUsada;
+    }
+
+    public int getTotalFretes(){return totalFretes;}
+    public double getValorTotal(){return valorTotal;}
+    public double getValorMedio(){return valorMedio;}
+    public String getTransportadoraMaisUsada(){return transportadoraMaisUsada;}
+}

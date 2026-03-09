@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.FretesController">
+    <Label text="Lista de Fretes" style="-fx-font-size: 20px;"/>
+    <TableView fx:id="fretesTable" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn"/>
+            <TableColumn text="Transportadora" fx:id="transportadoraColumn"/>
+            <TableColumn text="Valor" fx:id="valorColumn"/>
+            <TableColumn text="Data" fx:id="dataColumn"/>
+        </columns>
+    </TableView>
+    <Button text="Voltar" fx:id="voltarButton" onAction="#handleVoltar"/>
+</VBox>
