@@ -1,0 +1,18 @@
+ENDPOINTS PROJETO
+
+get transportadoras {id}
+put transportadoras {id}
+delete transportadoras {id}
+get transportadoras
+post transportadoras
+post upload tabela frete
+get tabela frete
+post tabela frete
+post login
+get fretes
+post fretes
+get fretes/transportadoras/{id}/fretes
+get fretes/transportadoras/ranking
+get fretes/cotação
+get cotação/dashboard
+get cotação/calcular
