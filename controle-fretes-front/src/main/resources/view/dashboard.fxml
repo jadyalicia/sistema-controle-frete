@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-background-color: #ecf0f1;" text="Sistema Controle de Fretes v.1" />
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <HBox prefHeight="60.0" spacing="10.0" style="-fx-background-color: #34495e;" BorderPane.alignment="CENTER_LEFT">
+         <padding>
+            <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+         </padding>
+         <children>
+            <Label style="-fx-text-fill: white; -fx-font-size: 18;" text="Controle de Fretes" />
+            <Region prefHeight="29.0" prefWidth="186.0" HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" text="Sair" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefWidth="200.0" spacing="15.0" style="-fx-background-color: #2c3e50;" BorderPane.alignment="TOP_LEFT">
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+         </padding>
+         <children>
+            <Label style="-fx-text-fill: white; -fx-font-size: 16;" text="Menu" />
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14;" text="Dashboard" />
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14;" text="Relatórios" />
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14;" text="Ranking" />
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14;" text="Fretes" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="TOP_LEFT">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="210.0" spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label style="-fx-font-size: 8; -fx-text-fill: #666;" text="Total Fretes">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Label>
+                        <Label style="-fx-font-size: 15; -fx-font-weight: bold;" text="152" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="210.0" spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow;" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 8; -fx-text-fill: #666;" text="Entregues" />
+                        <Label style="-fx-font-size: 15; -fx-font-weight: bold;" text="130" />
+                     </children></VBox>
+                  <VBox prefHeight="100.0" prefWidth="210.0" spacing="10.0" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow;" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <children>
+                        <Label style="-fx-font-size: 8; -fx-text-fill: #666;" text="Pendentes" />
+                        <Label style="-fx-font-size: 15; -fx-font-weight: bold;" text="22" />
+                     </children></VBox>
+               </children>
+            </HBox>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="100.66668701171875" text="Transportadora" />
+                <TableColumn prefWidth="80.6666259765625" text="Total Fretes" />
+                  <TableColumn prefWidth="78.0" text="Valor Total" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
