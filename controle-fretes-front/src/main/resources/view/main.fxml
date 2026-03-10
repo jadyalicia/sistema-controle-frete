@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.fretes.front.controller.MainController"
+    prefWidth="1000"
+    prefHeight="700">
+
+    <!-- ================= TOPO ================= -->
+    <top>
+        <HBox spacing="10" style="-fx-background-color: #34495e;">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <children>
+                <Label text="Controle de Fretes"
+                       style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Button text="Sair"/>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- ================= MENU LATERAL ================= -->
+    <left>
+        <VBox spacing="15"
+              prefWidth="200"
+              style="-fx-background-color: #2c3e50;">
+
+            <padding>
+                <Insets top="20" left="10" right="10" bottom="20"/>
+            </padding>
+
+            <children>
+
+                <Label text="Menu"
+                       style="-fx-text-fill: white; -fx-font-size: 16px;" />
+
+                <Button text="Dashboard"
+                        style="-fx-background-color: transparent; -fx-text-fill: white;"
+                        onAction="#abrirDashboard"/>
+
+                <Button text="Relatórios"
+                        style="-fx-background-color: transparent; -fx-text-fill: white;"
+                        onAction="#abrirRelatorios"/>
+
+                <Button text="Ranking"
+                        style="-fx-background-color: transparent; -fx-text-fill: white;"
+                        onAction="#abrirRanking"/>
+
+                <Button text="Fretes"
+                        style="-fx-background-color: transparent; -fx-text-fill: white;"
+                        onAction="#abrirFretes"/>
+
+            </children>
+        </VBox>
+    </left>
+
+    <!-- ================= CENTRO DINÂMICO ================= -->
+    <center>
+        <AnchorPane fx:id="contentArea"/>
+    </center>
+
+    <!-- ================= RODAPÉ ================= -->
+    <bottom>
+        <HBox alignment="CENTER"
+              style="-fx-background-color: #ecf0f1;"
+              prefHeight="30">
+
+            <children>
+                <Label text="Sistema Controle de Fretes v1.0"/>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>
