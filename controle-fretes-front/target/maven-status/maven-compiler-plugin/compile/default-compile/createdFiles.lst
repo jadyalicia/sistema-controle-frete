@@ -1,2 +1,12 @@
 com\fretes\front\controller\MainController.class
 com\fretes\front\Main.class
+com\fretes\front\model\RankingCotacao.class
+com\fretes\front\controller\FretesController$1.class
+com\fretes\front\controller\RelatorioController.class
+com\fretes\front\model\Pedido.class
+com\fretes\front\controller\FretesController.class
+com\fretes\front\model\Fretes.class
+com\fretes\front\controller\RankingController.class
+com\fretes\front\controller\PedidoController.class
+com\fretes\front\model\Transportadora.class
+com\fretes\front\controller\TransportadoraController.class

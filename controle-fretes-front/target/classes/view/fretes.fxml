@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.fretes.front.controller.FretesController">
+
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="15"/>
+    </padding>
+
+    <!-- ===== FILTROS ===== -->
+    <HBox spacing="10">
+        <TextField fx:id="txtFiltroPedido" promptText="Número Pedido"/>
+        <ComboBox fx:id="cbStatus" promptText="Status"/>
+        <!-- botão buscar agora funciona -->
+        <Button onAction="#buscarFretes" text="Buscar"/>
+    </HBox>
+
+    <!-- ===== TABELA ===== -->
+    <TableView fx:id="tblFretes" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colPedido" text="Pedido"/>
+            <TableColumn fx:id="colCliente" text="Cliente"/>
+            <TableColumn fx:id="colCidade" text="Cidade"/>
+            <TableColumn fx:id="colEstado" text="Estado"/>
+            <TableColumn fx:id="colPeso" text="Peso"/>
+            <TableColumn fx:id="colCubagem" text="Cubagem"/>
+            <TableColumn fx:id="colTransportadora" text="Transportadora"/>
+            <TableColumn fx:id="colValor" text="Valor"/>
+            <TableColumn fx:id="colNF" text="NF"/>
+            <TableColumn fx:id="colCTe" text="CTe"/>
+            <TableColumn fx:id="colStatus" text="Status"/>
+        </columns>
+    </TableView>
+
+    <!-- ===== FORMULÁRIO ===== -->
+    <GridPane hgap="10" vgap="10">
+        <Label text="Pedido"/>
+        <TextField fx:id="txtPedido" GridPane.columnIndex="1"/>
+
+        <Label text="Peso" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtPeso" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Valor" GridPane.rowIndex="2"/>
+        <TextField fx:id="txtValor" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="NF" GridPane.columnIndex="2"/>
+        <TextField fx:id="txtNF" GridPane.columnIndex="3"/>
+
+        <Label text="CTe" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtCTe" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+        <Label text="Transportadora" GridPane.rowIndex="3"/>
+        <ComboBox fx:id="cbTransportadora" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <HBox spacing="10" GridPane.rowIndex="4">
+            <Button onAction="#novoFrete" text="Novo"/>
+            <Button onAction="#salvarFrete" text="Salvar"/>
+            <Button fx:id="btnVerRanking" onAction="#abrirRanking" text="Ver Ranking"/>
+        </HBox>
+    </GridPane>
+
+</VBox>
